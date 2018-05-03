@@ -34,7 +34,7 @@ const saveToCache = slot => {
 const checkSlot = data => {
   var words = data.split(' ');
   if (words[0] === 'Sensor') {
-    var slotNumber = parseInt(words[1]);
+    var slotNumber = words[1];
     var slot = getSlotFromCache(slotNumber);
 
     var currentStatus = words[2];
