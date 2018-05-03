@@ -11,7 +11,7 @@ const parser = new parsers.Readline({ delimiter: '\r\n' });
 const postToAPI = slot => {
   request.post(
     'http://127.0.0.1:9000/parkingslots/state/' + slot.id,
-    { json: { slot: slot } },
+    { json: slot },
     (err, res, body) => {
       if (err) throw err;
     }
