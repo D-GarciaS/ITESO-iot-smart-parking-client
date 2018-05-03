@@ -86,8 +86,6 @@ const updateCache = (err, body) => {
   });
 
   reduced.map(slot => myCache.set(slot.number, slot));
-
-  console.log('Se recibieron', reduced.length);
 };
 
 const processGetSection = (err, res, body, next) => {
