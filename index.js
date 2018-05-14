@@ -39,10 +39,9 @@ const checkSlot = data => {
 
     var currentStatus = words[2];
     if (slot != null && slotChanged(slot, currentStatus)) {
-      slot.occupied = !slot.occupied;
+      slot.occupied = currentStatus === 'occupied';
       saveToCache(slot);
       postToAPI(slot);
-      console.log(slot);
     }
   }
 };
