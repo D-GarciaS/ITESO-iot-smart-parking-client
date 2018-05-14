@@ -64,8 +64,7 @@ const setRefreshInterval = section => () => {
     () =>
       request.get(
         'http://127.0.0.1:9000/parkingslots/section/' + section,
-        (err, res, body) =>
-          processGetSection(err, res, body, () => console.log('data refresed'))
+        (err, res, body) => processGetSection(err, res, body)
       ),
     10000
   );
